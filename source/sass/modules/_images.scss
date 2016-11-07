@@ -1,0 +1,27 @@
+.er-bg-container {
+	width: 100vw;
+	height: 100vh;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+
+	img {
+		object-fit: cover;
+
+		width: 100vw;
+		height: 100vh;
+		opacity: 0;
+    	transition: opacity 1000ms ease-out;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		&.active-item {
+			opacity: 1;
+    		transition: opacity 1000ms ease-out;
+		}
+	}
+}

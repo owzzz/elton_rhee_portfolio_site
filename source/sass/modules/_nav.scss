@@ -1,0 +1,97 @@
+/******************************************************************************
+ * Navigations
+ *
+ * Custom CSS styles that relate to custom Navigation modules.
+ *
+ * This CSS file should probably related to your custom /js/src/modules/ module.
+*******************************************************************************/
+
+.er-logo-title {
+	position: absolute;
+	top: 185px;
+    right: 153px;
+    z-index: 0;
+
+	letter-spacing: 2px;
+
+	font-family: $base-font;
+	font-size: 16px;
+
+	text-transform: uppercase;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.er-main-nav {
+	align-items: center;
+    display: flex;
+    left: 100px;
+    position: relative;
+    z-index: 2;
+
+	ul {
+		list-style-type: none;
+		li {
+			margin-bottom: 30px;
+			opacity: 1;
+
+			a {
+				text-decoration: none;
+				color: $color-charcoal;
+				transition: color 600ms ease-out;
+				font-family: $base-font;
+			 	letter-spacing: 4px;
+			}
+
+			&.active-item {
+				opacity: 1;
+
+				a {
+					color: $color-white;
+					transition: color 600ms ease-out;
+				}
+
+			}
+
+			&.non-active-item {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.er-secondary-nav {
+	position: absolute;
+	top: 220px;
+    right: 156px;
+    z-index: 2;
+
+	ul {
+		opacity: 0;
+    	transform: translateY(10px);
+    	transition: opacity 600ms ease-out,transform 400ms ease-out;
+
+		list-style-type: none;
+		text-decoration: none;
+
+		li {
+			margin-bottom: 15px;
+			text-align: right;
+
+			 a {
+			 	color: $color-charcoal;
+			 	font-family: $base-font;
+			 	text-decoration: none;
+			 	text-transform: lowercase;
+			 }
+		}
+
+		&.er-active {
+			opacity: 1;
+			transform: translateY(0);
+			transition: opacity 600ms ease-out,transform 400ms ease-out;
+		}
+	}
+}
